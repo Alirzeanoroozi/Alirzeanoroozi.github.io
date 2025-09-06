@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://Alirzeanoroozi.github.io/sitemap.xml
