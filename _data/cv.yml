@@ -2,96 +2,115 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Alireza Noroozi
+    - name: Email
+      value: noroozi.alirezaa@gmail.com
     - name: Languages
-      value: English, German
+      value: English, Persian
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Bachelor of Science in Computer Engineering
+      institution: Sharif University, Tehran, Iran
+      year: 2020 - 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - GPA: 17.68/20 (3.54/4.0)
+        - Focus on Machine Learning and Computational Biology
+        - Bachelor thesis on Paratope Prediction using Protein Language Models
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: AI Engineer in Computational Biology
+      institution: 310.ai
+      year: 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Working on Protein Design Deep learning models
+        - ML research on Taxonomy prediction models
+        - Designing Protein Binders using AI
+        - Developing AI chatbot backend using LLM calling Tools
+    - title: PHP, Back-end, Web developer
+      institution: Ershan Total Solution
+      year: June 2022 - September 2022
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Full-stack web development
+        - Backend systems development
+    - title: Mathematics Olympiad Tutor
+      institution: Salam High School
+      year: September 2021 - March 2023
       description:
+        - Teaching advanced mathematics concepts
+        - Preparing students for mathematical competitions
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Research Experience
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Research Assistant - Transfer Learning, Antibody, Paratope Prediction
+      institution: OPL, Sharif University
+      year: June 2023 - September 2024
+      description:
+        - Department of Computer Engineering, Sharif University
+        - Research as Bachelor Project under Supervision of Dr. Koohi
+        - "ParaAntiProt: A Transfer Learning for Paratope Prediction only using Sequence"
+        - Improving the accuracy of Paratope Prediction using Protein Language Models
+    - title: Research Intern - Federated Learning, Medical ML
+      institution: apLab, Concordia University
+      year: June 2023 - September 2023
+      description:
+        - Department of Computer Science, Concordia University, Montreal City, Canada
+        - Research as Intern under Supervision of Dr. Kersten-Ortel
+        - Comparing and implementing different Federated Learning Algorithms for data imputation on Parkinson's Diseases
+        - Using GAN and Machine Learning methods for Parkinson's disease prediction with distributed data
+    - title: Research Intern - Federated Learning, Distributed Deep Learning
+      institution: apLab, Concordia University
+      year: June 2023 - September 2023
+      description:
+        - Department of Computer Science, Concordia University, Montreal City, Canada
+        - Research as Intern under Supervision of Dr. Kersten-Ortel
+        - Implementing PW, FedAvg, FedOpt, etc., in PyTorch and working on Mathematical proof of PW Convergence
+        - Developing federated Algorithms for increasing performance in non-identical data
+    - title: Research Assistant - Attention Deep Learning Models, Protein Affinity Binding
+      institution: OPL, Sharif University
+      year: December 2022 - March 2023
+      description:
+        - Department of Computer Engineering, Sharif University
+        - Research as a Bachelor Student under the Supervision of Dr. Koohi
+        - Working on MHC-Peptide binding prediction using attention mechanisms
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Vector Scholarship for MSc Entrance at York University (17,500 CAD)
+    - year: 2019
       items:
-        - Max Planck Medal
+        - Silver Medal in Iran's National Mathematical Olympiad
+    - year: 2018
+      items:
+        - Bronze Medal in Iran's National Mathematical Olympiad
 
-- title: Academic Interests
+- title: Research Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Computational Biology
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Large language models for biological sequences
+        - Protein Design Models
+        - Antibody Design
+        - Paratope Prediction
+    - title: Machine Learning
       items:
-        - Description 1.
-        - Description 2.
+        - Federated Learning
+        - Transfer Learning
+        - Deep Learning for Medical Applications
+        - Distributed Machine Learning
 
-- title: Other Interests
+- title: Technical Skills
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Programming Languages:</u> Python, PHP, JavaScript, C++
+    - <u>ML/DL Frameworks:</u> PyTorch, TensorFlow, Scikit-learn
+    - <u>Bioinformatics Tools:</u> Biopython, ESM, ProtTrans
+    - <u>Other Technologies:</u> Git, Docker, Linux, Web Development
