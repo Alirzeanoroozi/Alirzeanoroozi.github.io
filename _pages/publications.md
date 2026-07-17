@@ -9,6 +9,16 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
+## Research summary
+
+My recent work focuses on practical machine learning for computational biology and healthcare:
+
+- **Antimicrobial peptide design with diffusion models**: We introduced **AMP-DiT**, a denoising diffusion transformer that generates antimicrobial peptides directly in sequence space, guided by an AMP classifier for activity and diversity. Accepted as a poster at the GenBio Workshop at ICML 2026.
+- **Antibody and protein language models**: We introduced **ParaAntiProt** for paratope prediction, combining antibody-specific signals with protein language model representations to improve antibody binding-site prediction quality.
+- **Federated learning for clinical data**: We studied privacy-preserving imputation of missing Parkinson's disease clinical assessments, showing how federated learning can support robust prediction without centralizing sensitive patient data.
+
+For full citation details, links, and BibTeX entries, see the list below.
+
 <!-- Bibsearch Feature -->
 
 {% include bib_search.liquid %}

@@ -2,16 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://310.ai'>310.ai</a> AI Engineer in Computational Biology
+subtitle: <a href='https://www.ku.edu.tr/en'>Koç University</a> MSc student · Research Intern at <a href='https://delta-research-team.github.io/delta_web/index.html#home'>DELTA</a>, Inria Nancy
 
 profile:
   align: right
   image: unnamed.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>AI Engineer</p>
-    <p>310.ai</p>
-    <p>Computational Biology</p>
+    <p>MSc Student</p>
+    <p>Koç University</p>
+    <p>Summer Research Intern</p>
+    <p>Inria Nancy (DELTA)</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,10 +28,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an AI Engineer at [310.ai](https://310.ai) specializing in Computational Biology, where I work on cutting-edge protein design deep learning models and develop AI-driven solutions for biological applications. My research focuses on the intersection of machine learning and biology, with particular expertise in protein language models, antibody design, and federated learning for medical applications.
+I am an MSc student in Computer Engineering at [Koç University](https://www.ku.edu.tr/en), where I work on generative modeling for antimicrobial peptide design. I am also a summer research intern with the [DELTA team](https://delta-research-team.github.io/delta_web/index.html#home) at Inria Nancy, supervised by Hamed Khakzad and Yasaman Karami, working on protein binder design evaluation with molecular dynamics simulation.
 
-I graduated from Sharif University with a Bachelor of Science in Computer Engineering (GPA: 17.68/20), where I conducted research on paratope prediction using protein language models. I have published research in prestigious journals including Nature Scientific Reports and IEEE Journal of Biomedical and Health Informatics, focusing on antibody prediction and federated learning applications for Parkinson's disease clinical assessments.
+My research sits at the intersection of machine learning and computational biology. Recent work includes **AMP-DiT**, a denoising diffusion transformer for antimicrobial peptide generation directly in sequence space, accepted as a poster at the GenBio Workshop at ICML 2026. I have also published on paratope prediction with protein language models (*Scientific Reports*) and federated learning for Parkinson's disease clinical data (*IEEE JBHI*).
 
-My research interests include large language models for biological sequences, protein design models, and antibody design. I have been awarded the 2024 Vector Scholarship for MSc Entrance at York University (valued at 17,500 CAD) and have received Bronze (2018) and Silver (2019) medals in Iran's national Mathematical Olympiad.
+Previously, I was an AI Engineer in Computational Biology at [310.ai](https://310.ai), where I worked on protein design, taxonomy prediction, and binder design pipelines. I received my BSc in Computer Engineering from Sharif University (GPA: 17.68/20), with a thesis on paratope prediction using protein language models.
 
-Currently, I am developing innovative AI solutions for protein binders design, taxonomy prediction models, and AI chatbot backends using LLM calling tools, contributing to the advancement of computational biology and personalized medicine.
+I am interested in protein and peptide design, generative models for biological sequences, antibody design, and molecular dynamics for assessing protein flexibility and binding. I was awarded the 2025 Presidential Fellowship at Koç University and the 2024 Vector Scholarship for MSc Entrance at York University (17,500 CAD), and received Bronze (2018) and Silver (2019) medals in Iran's national Mathematical Olympiad.

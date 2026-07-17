@@ -11,6 +11,12 @@
 - title: Education
   type: time_table
   contents:
+    - title: MSc in Computer Engineering
+      institution: Koç University, Istanbul, Turkey
+      year: 2025 - Present
+      description:
+        - Presidential Fellowship for MSc Entrance
+        - Research on antimicrobial peptide design and generative modeling
     - title: Bachelor of Science in Computer Engineering
       institution: Sharif University, Tehran, Iran
       year: 2020 - 2024
@@ -19,12 +25,43 @@
         - Focus on Machine Learning and Computational Biology
         - Bachelor thesis on Paratope Prediction using Protein Language Models
 
+- title: Publications
+  type: time_table
+  contents:
+    - title: "AMP-DiT: Antimicrobial Peptide Design with Denoising Diffusion Transformers and Classifier Guidance"
+      institution: GenBio Workshop at ICML 2026 (poster)
+      year: 2026
+      description:
+        - "Noroozi, A. and Gürsoy, A."
+        - "Generates antimicrobial peptides directly in sequence space using denoising diffusion transformers and classifier guidance"
+      linkitems:
+        - link: https://openreview.net/forum?id=KYzd6lcfZ0
+          linkname: paper
+        - link: https://github.com/Alirzeanoroozi/DiT-AMP
+          linkname: code
+    - title: ParaAntiProt provides paratope prediction using antibody and protein language models
+      institution: Scientific Reports, Nature Publishing Group
+      year: 2024
+      description:
+        - "Kalemati, M., Noroozi, A., Shahbakhsh, A. et al."
+      linkitems:
+        - link: https://doi.org/10.1038/s41598-024-80940-y
+          linkname: paper
+    - title: "Bridging the Gaps: Imputation of Parkinson's Disease Clinical Assessments With Federated Learning"
+      institution: IEEE Journal of Biomedical and Health Informatics
+      year: 2025
+      description:
+        - "Reyes, J., Noroozi, A., Xiao, Y. and Kersten-Oertel, M."
+      linkitems:
+        - link: https://ieeexplore.ieee.org/document/11098925
+          linkname: paper
+
 - title: Experience
   type: time_table
   contents:
     - title: AI Engineer in Computational Biology
       institution: 310.ai
-      year: 2024 - Present
+      year: 2024 - 2025
       description:
         - Working on Protein Design Deep learning models
         - ML research on Taxonomy prediction models
@@ -46,6 +83,20 @@
 - title: Research Experience
   type: time_table
   contents:
+    - title: Research Intern - Protein Binder Design Evaluation, Molecular Dynamics
+      institution: DELTA Team, Inria Nancy, France
+      year: June 2026 - Present
+      description:
+        - Supervised by Hamed Khakzad and Yasaman Karami
+        - Evaluating protein binder design candidates using molecular dynamics simulation
+        - Assessing protein flexibility and binding quality for computational binder design
+    - title: Research Assistant - AMP Design, Diffusion Transformers
+      institution: Koç University
+      year: October 2025 - Present
+      description:
+        - "AMP-DiT: antimicrobial peptide generation with denoising diffusion transformers and classifier guidance"
+        - Accepted as a poster at the GenBio Workshop at ICML 2026
+        - Supervised by Prof. Attila Gürsoy and Prof. Özlem Keskin
     - title: Research Assistant - Transfer Learning, Antibody, Paratope Prediction
       institution: OPL, Sharif University
       year: June 2023 - September 2024
@@ -81,6 +132,9 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2025
+      items:
+        - Presidential Fellowship for MSc Entrance at Koç University
     - year: 2024
       items:
         - Vector Scholarship for MSc Entrance at York University (17,500 CAD)
@@ -98,8 +152,10 @@
       items:
         - Large language models for biological sequences
         - Protein Design Models
+        - Antimicrobial peptide design
         - Antibody Design
         - Paratope Prediction
+        - Molecular dynamics for protein flexibility and binder evaluation
     - title: Machine Learning
       items:
         - Federated Learning

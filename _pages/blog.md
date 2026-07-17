@@ -29,6 +29,17 @@ pagination:
   </div>
   {% endif %}
 
+<div class="mb-4">
+  <h2>How to add a blog post</h2>
+  <ol>
+    <li>Create a new Markdown file in <code>_posts/</code> named <code>YYYY-MM-DD-title.md</code>.</li>
+    <li>Add front matter at the top: <code>layout: post</code>, <code>title</code>, <code>date</code>, and optional <code>description</code>, <code>tags</code>, and <code>categories</code>.</li>
+    <li>Write your content in Markdown below the front matter.</li>
+    <li>Commit and push to your repository; GitHub Actions will deploy the update.</li>
+  </ol>
+  <p class="post-meta">Tip: duplicate one of the existing files in <code>_posts/</code> and edit it to keep formatting consistent.</p>
+</div>
+
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
   <div class="tag-category-list">
