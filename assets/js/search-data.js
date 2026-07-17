@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "Curriculum vitae — MSc student at Koç University and research intern at Inria Nancy (DELTA).",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -426,6 +426,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-our-paper-paraantiprot-provides-paratope-prediction-using-antibody-and-protein-language-models-has-been-published-in-nature-scientific-reports",
           title: 'Our paper “ParaAntiProt provides paratope prediction using antibody and protein language models” has...',
+          description: "",
+          section: "News",},{id: "news-our-paper-amp-dit-antimicrobial-peptide-design-with-denoising-diffusion-transformers-and-classifier-guidance-has-been-accepted-as-a-poster-at-the-genbio-workshop-at-icml-2026-code",
+          title: 'Our paper “AMP-DiT: Antimicrobial Peptide Design with Denoising Diffusion Transformers and Classifier Guidance”...',
+          description: "",
+          section: "News",},{id: "news-started-my-summer-research-internship-with-the-delta-team-at-inria-nancy-supervised-by-hamed-khakzad-and-yasaman-karami-working-on-protein-binder-design-evaluation-with-molecular-dynamics-simulation",
+          title: 'Started my summer research internship with the DELTA team at Inria Nancy, supervised...',
           description: "",
           section: "News",},{id: "projects-parantiprot",
           title: 'Parantiprot',
