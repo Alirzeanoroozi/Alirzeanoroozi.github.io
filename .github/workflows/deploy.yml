@@ -19,8 +19,8 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp index.html cv.html 404.html .nojekyll robots.txt _site/
-          cp -r css img pdf _site/
+          cp index.html cv.html blogs.html post.html 404.html .nojekyll robots.txt _site/
+          cp -r css img pdf js posts _site/
       - name: Deploy
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
