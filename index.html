@@ -6,7 +6,7 @@
     <title>Alireza Noroozi</title>
     <meta
       name="description"
-      content="MSc student and machine learning researcher working on peptide design and protein binder evaluation."
+      content="MSc student and machine learning researcher working on peptide and binder design, generative models for biological sequences, and molecular dynamics based evaluation."
     />
     <link rel="icon" href="img/profile.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/theme.js"></script>
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
@@ -24,11 +25,14 @@
         <a class="wordmark" href="index.html">Alireza Noroozi</a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html" aria-current="page">About</a>
+          <a href="#research">Research</a>
           <a href="#publications">Publications</a>
           <a href="blogs.html">Blogs</a>
           <a href="cv.html">CV</a>
-          <a href="pdf/Alireza_Noroozi_CV.pdf">PDF</a>
         </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+          <span aria-hidden="true" data-theme-icon>◐</span>
+        </button>
       </div>
     </header>
 
@@ -36,75 +40,228 @@
       <section class="hero">
         <div>
           <p class="kicker">
-            Koç University · Research intern at
-            <a href="https://delta-research-team.github.io/delta_web/index.html#home">DELTA</a>, Inria Nancy
+            MSc, Koç University · Research intern,
+            <a href="https://delta-research-team.github.io/delta_web/index.html#home">DELTA</a> — Inria Nancy
           </p>
           <h1>Alireza Noroozi</h1>
           <div class="lead">
             <p>
-              I am an MSc student in Computer Engineering at
-              <a href="https://www.ku.edu.tr/en">Koç University</a>, where I work on generative modeling for antimicrobial peptide design. I am also a summer research intern with the
+              I build generative models for peptides and protein binders, and I care as much about
+              how we <em>evaluate</em> those designs as about how we generate them.
+            </p>
+            <p>
+              I am an MSc student in Computational Sciences and Engineering at
+              <a href="https://www.ku.edu.tr/en">Koç University</a>, advised by
+              Prof. Attila Gürsoy and Prof. Özlem Keskin, where I work on antimicrobial peptide (AMP)
+              design against carbapenem-resistant targets. Since June 2026 I have also been a research
+              intern with the
               <a href="https://delta-research-team.github.io/delta_web/index.html#home">DELTA team</a>
-              at Inria Nancy, supervised by Hamed Khakzad and Yasaman Karami, working on protein binder design evaluation with molecular dynamics simulation.
+              at Inria Nancy, with Hamed Khakzad and Yasaman Karami, working on peptide binder design
+              and on evaluating binders with molecular dynamics rather than static scores alone.
             </p>
             <p>
-              My research sits at the intersection of machine learning and computational biology. Recent work includes
-              <strong>AMP-DiT</strong>, a denoising diffusion transformer for antimicrobial peptide generation directly in sequence space, accepted as a poster at the GenBio Workshop at ICML 2026. I have also published on paratope prediction with protein language models (<em>Scientific Reports</em>) and federated learning for Parkinson’s disease clinical data (<em>IEEE JBHI</em>).
+              Recent work includes <strong>AMP-DiT</strong>, a classifier-conditioned discrete
+              diffusion transformer that generates peptides directly in sequence space (GenBio
+              Workshop at ICML 2026); <strong>AMP-BindGen</strong>, a guided design pipeline for
+              peptide inhibitors of the carbapenemases NDM-5 and KPC-3, now in experimental testing;
+              and <strong>IDPepDesign</strong>, a target-conditioned insertion–deletion diffusion
+              model for peptide binder design.
             </p>
             <p>
-              Previously, I was an AI Engineer in Computational Biology at
-              <a href="https://310.ai">310.ai</a>, where I worked on protein design, taxonomy prediction, and binder design pipelines. I received my BSc in Computer Engineering from Sharif University (GPA: 17.68/20), with a thesis on paratope prediction using protein language models.
-            </p>
-            <p>
-              I am interested in protein and peptide design, generative models for biological sequences, antibody design, and molecular dynamics for assessing protein flexibility and binding. I was awarded the 2025 Presidential Fellowship at Koç University and the 2024 Vector Scholarship for MSc Entrance at York University (17,500 CAD), and received Bronze (2018) and Silver (2019) medals in Iran’s national Mathematical Olympiad.
+              Before Koç I was an AI Engineer in Computational Biology at
+              <a href="https://310.ai">310.ai</a> (2024–2025), working on protein design, taxonomy
+              prediction and binder pipelines. I hold a BSc in Computer Engineering from Sharif
+              University, with a thesis on paratope prediction using protein language models
+              (<em>Scientific Reports</em>, 2024).
             </p>
           </div>
           <div class="actions">
+            <a class="btn btn-primary" href="cv.html">CV</a>
+            <a class="btn" href="pdf/Alireza_Noroozi_Research_Statement.pdf">Research statement</a>
             <a class="btn" href="mailto:noroozi.alirezaa@gmail.com">Email</a>
+            <a class="btn" href="https://scholar.google.com/citations?user=CzouC0IAAAAJ&hl=en">Scholar</a>
             <a class="btn" href="https://github.com/Alirzeanoroozi">GitHub</a>
-            <a class="btn" href="cv.html">CV</a>
           </div>
         </div>
         <img class="portrait" src="img/profile.jpg" alt="Portrait of Alireza Noroozi" width="184" height="184" />
+      </section>
+
+      <section id="research" aria-labelledby="research-heading">
+        <h2 id="research-heading">Research</h2>
+        <p class="section-intro">
+          Four threads, all pointed at the same question: how do we design short binders that are
+          genuinely selective, and how do we know before we go to the bench?
+        </p>
+        <div class="cards">
+          <article class="card">
+            <!-- Drop an image at img/work/amp-dit.png to show a thumbnail here. -->
+            <div class="thumb-wrap"><img class="thumb" src="img/work/amp-dit.png" alt="" /></div>
+            <h3>AMP-DiT</h3>
+            <p class="card-meta">Discrete diffusion · sequence space · classifier guidance</p>
+            <p>
+              Existing AMP generators lean on protein language models trained on full-length
+              proteins, which mismatches the peptide distribution. AMP-DiT instead runs a DiT-style
+              denoiser directly over sequence space, conditioned on Macrel-derived activity and
+              non-hemolytic safety scores. Conditioning on one predictor transfers to others, which
+              suggests it learns antimicrobial structure rather than overfitting a scorer.
+            </p>
+            <p class="links">
+              <a href="https://openreview.net/forum?id=KYzd6lcfZ0">Paper</a>
+              <a href="pdf/AMP-DiT_genbio_ICML2026.pdf">PDF</a>
+              <a href="https://github.com/Alirzeanoroozi/DiT-AMP">Code</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <!-- Drop an image at img/work/amp-bindgen.png to show a thumbnail here. -->
+            <div class="thumb-wrap"><img class="thumb" src="img/work/amp-bindgen.png" alt="" /></div>
+            <h3>AMP-BindGen</h3>
+            <p class="card-meta">Targeted design · NDM-5 and KPC-3 · wet-lab validation</p>
+            <p>
+              A guided design pipeline for peptide-like binders against two clinically important
+              carbapenemases. Candidates are ranked by a composite scheme combining interface
+              confidence, catalytic-site engagement, predicted antimicrobial activity and toxicity
+              filters. Designed peptides are in activity testing, and the first results have now
+              come back from the lab.
+            </p>
+            <p class="links">
+              <a href="pdf/ECCB_poster_AMPBindGen.pdf">ECCB 2026 poster</a>
+              <a href="pdf/AI_symposium_AMP_poster.pdf">AI Symposium poster</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <!-- Drop an image at img/work/idpepdesign.png to show a thumbnail here. -->
+            <div class="thumb-wrap"><img class="thumb" src="img/work/idpepdesign.png" alt="" /></div>
+            <h3>IDPepDesign</h3>
+            <p class="card-meta">Insertion–deletion diffusion · target-conditioned</p>
+            <p>
+              Many promising binders are simply too large to synthesise or deliver. IDPepDesign
+              builds on SCISOR, an insertion–deletion diffusion model, and adds two conditioning
+              paths — a pooled target representation injected through denoising, and residue-level
+              cross-attention — turning an unconditional peptide generator into a target-aware
+              binder designer. Perplexity 17.1 → 11.3 and FPD 1.84 → 0.75, with competitive
+              interface quality across 11 benchmark targets.
+            </p>
+            <p class="links">
+              <a href="pdf/IDPepDesign__Insertion_Deletion_is_all_peptide_design_needs_ML4SM_Neurips2026.pdf">Preprint</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <!-- Drop an image at img/work/binder-eval.png to show a thumbnail here. -->
+            <div class="thumb-wrap"><img class="thumb" src="img/work/binder-eval.png" alt="" /></div>
+            <h3>BinderEval &amp; COMPASS</h3>
+            <p class="card-meta">Molecular dynamics · evaluation beyond static scores</p>
+            <p>
+              Binder design is still judged mostly by interface pLDDT, PAE and energy terms on a
+              single predicted complex — none of which capture induced fit or show whether a binder
+              stays selective across a conformational ensemble. BinderEval scores designs using
+              dynamics data and COMPASS, and a new version of COMPASS is now available.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="news" aria-labelledby="news-heading">
         <h2 id="news-heading">News</h2>
         <ol class="news">
           <li>
+            <time datetime="2026-10">Oct 2026</time>
+            <div>A new version of <strong>COMPASS</strong> is available.</div>
+          </li>
+          <li>
+            <time datetime="2026-10">Oct 2026</time>
+            <div>
+              Our preprint <strong>BinderEval</strong>, on evaluating designed binders with dynamics
+              data and COMPASS, is out.
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10">Oct 2026</time>
+            <div>
+              Our preprint <strong>IDPepDesign: Insertion–Deletion is all peptide design needs</strong>
+              is out.
+              <a href="pdf/IDPepDesign__Insertion_Deletion_is_all_peptide_design_needs_ML4SM_Neurips2026.pdf">PDF</a>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-09-30">Sep 2026</time>
+            <div>Gave a talk at <strong>PhD Pizza Time</strong> at Inria Nancy (30 September).</div>
+          </li>
+          <li>
+            <time datetime="2026-09">Sep 2026</time>
+            <div>
+              Presented <strong>AMP-BindGen</strong> and <strong>AMP-DiT</strong> as posters at
+              <strong>ECCB 2026</strong> in Geneva.
+              <a href="pdf/ECCB_poster_AMPBindGen.pdf">AMP-BindGen</a>
+              <a href="pdf/ECCB_poster_AMP_DiT.pdf">AMP-DiT</a>
+            </div>
+          </li>
+          <li>
             <time datetime="2026-07">Jul 2026</time>
             <div>
-              Started my summer research internship with the
-              <a href="https://delta-research-team.github.io/delta_web/index.html#home">DELTA team</a>
-              at Inria Nancy, supervised by Hamed Khakzad and Yasaman Karami, working on protein binder design evaluation with molecular dynamics simulation.
+              Our paper
+              <a href="https://openreview.net/forum?id=KYzd6lcfZ0">AMP-DiT</a>
+              was accepted as a poster at the <strong>GenBio Workshop at ICML 2026</strong>.
+              <a href="https://github.com/Alirzeanoroozi/DiT-AMP">Code</a>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-07">Jul 2026</time>
+            <div>
+              Submitted <strong>BoltzGen-ADC</strong>, a pipeline for generative design of
+              protease-cleavable peptide linkers for antibody–drug conjugates, to the
+              <strong>Merck Challenge</strong>.
+              <a href="pdf/Merck_Challenge.pdf">PDF</a>
             </div>
           </li>
           <li>
             <time datetime="2026-06">Jun 2026</time>
             <div>
-              Our paper
-              <a href="https://openreview.net/forum?id=KYzd6lcfZ0">AMP-DiT: Antimicrobial Peptide Design with Denoising Diffusion Transformers and Classifier Guidance</a>
-              has been accepted as a poster at the GenBio Workshop at ICML 2026.
-              <a href="https://github.com/Alirzeanoroozi/DiT-AMP">Code</a>
+              Started a summer research internship with the
+              <a href="https://delta-research-team.github.io/delta_web/index.html#home">DELTA team</a>
+              at Inria Nancy, supervised by Hamed Khakzad and Yasaman Karami, on peptide binder
+              design and evaluation with molecular dynamics.
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-04">Apr 2026</time>
+            <div>
+              Presented <strong>AMP-BindGen</strong> and <strong>TED</strong> at the
+              <strong>Koç University AI Symposium</strong>; my advisor Attila Gürsoy also presented
+              the AMP design work there.
+              <a href="pdf/AI_symposium_AMP_poster.pdf">AMP poster</a>
+              <a href="pdf/AI_symposium_TED_poster.pdf">TED poster</a>
+              <a href="pdf/AI_Symposium_AMP_Design__2026.pdf">Talk</a>
+            </div>
+          </li>
+          <li>
+            <time datetime="2025-10">Oct 2025</time>
+            <div>
+              Started my MSc at Koç University on peptide design, with a Presidential Fellowship.
             </div>
           </li>
           <li>
             <time datetime="2024-12">Dec 2024</time>
             <div>
-              Our paper “ParaAntiProt provides paratope prediction using antibody and protein language models” has been published in <em>Nature Scientific Reports</em>.
+              Our paper “ParaAntiProt provides paratope prediction using antibody and protein
+              language models” was published in <em>Scientific Reports</em>.
             </div>
           </li>
           <li>
             <time datetime="2024-09">Sep 2024</time>
             <div>
-              Started working as AI Engineer in Computational Biology at
-              <a href="https://310.ai">310.ai</a>, focusing on protein design and AI-driven biological solutions.
+              Started as AI Engineer in Computational Biology at
+              <a href="https://310.ai">310.ai</a>.
             </div>
           </li>
           <li>
             <time datetime="2024-06">Jun 2024</time>
             <div>
-              Graduated from Sharif University with a BSc in Computer Engineering (GPA: 17.68/20). Completed a thesis on paratope prediction using protein language models.
+              Graduated from Sharif University with a BSc in Computer Engineering, with a thesis on
+              paratope prediction using protein language models. Awarded the Vector Scholarship for
+              MSc entrance at York University.
             </div>
           </li>
         </ol>
@@ -113,21 +270,55 @@
       <section id="publications" aria-labelledby="pub-heading">
         <h2 id="pub-heading">Publications</h2>
 
+        <h3 class="sub-heading">Preprints and submissions</h3>
+
         <article class="paper">
-          <h3>AMP-DiT: Antimicrobial Peptide Design with Denoising Diffusion Transformers and Classifier Guidance</h3>
-          <p class="meta">Noroozi, A. and Gürsoy, A.</p>
-          <p class="venue">GenBio Workshop at ICML 2026 (poster)</p>
+          <h4>IDPepDesign: Insertion–Deletion is all peptide design needs</h4>
+          <p class="meta">Noroozi, A., Keskin, Ö., Gürsoy, A., Karami, Y. and Khakzad, H.</p>
+          <p class="venue">Preprint, 2026 · ML4SM Workshop, NeurIPS 2026</p>
           <p>
-            Generates antimicrobial peptides directly in sequence space using denoising diffusion transformers and classifier guidance.
+            A target-conditioned insertion–deletion diffusion model that turns an unconditional
+            peptide generator into a binder designer.
           </p>
           <p class="links">
+            <a href="pdf/IDPepDesign__Insertion_Deletion_is_all_peptide_design_needs_ML4SM_Neurips2026.pdf">PDF</a>
+          </p>
+        </article>
+
+        <article class="paper">
+          <h4>BinderEval: evaluating designed protein binders with dynamics data and COMPASS</h4>
+          <p class="meta">With the DELTA team, Inria Nancy</p>
+          <p class="venue">Preprint, 2026</p>
+          <p>
+            Replaces single-structure confidence scores with ensemble- and dynamics-based evidence
+            for whether a designed binder actually holds.
+          </p>
+        </article>
+
+        <article class="paper">
+          <h4>BoltzGen-ADC: generative design of universal protease-cleavable peptide linkers for antibody–drug conjugates</h4>
+          <p class="meta">Ghasemiagreh, M. and Noroozi, A.</p>
+          <p class="venue">Merck Challenge submission, 2026</p>
+          <p class="links">
+            <a href="pdf/Merck_Challenge.pdf">PDF</a>
+          </p>
+        </article>
+
+        <h3 class="sub-heading">Peer-reviewed</h3>
+
+        <article class="paper">
+          <h4>AMP-DiT: Antimicrobial Peptide Design with AMP-classifier Conditional Diffusion Transformers</h4>
+          <p class="meta">Noroozi, A., Keskin, Ö. and Gürsoy, A.</p>
+          <p class="venue">GenBio Workshop at ICML 2026 (poster)</p>
+          <p class="links">
             <a href="https://openreview.net/forum?id=KYzd6lcfZ0">Paper</a>
+            <a href="pdf/AMP-DiT_genbio_ICML2026.pdf">PDF</a>
             <a href="https://github.com/Alirzeanoroozi/DiT-AMP">Code</a>
           </p>
         </article>
 
         <article class="paper">
-          <h3>Bridging the Gaps: Imputation of Parkinson’s Disease Clinical Assessments With Federated Learning</h3>
+          <h4>Bridging the Gaps: Imputation of Parkinson’s Disease Clinical Assessments With Federated Learning</h4>
           <p class="meta">Reyes, J., Noroozi, A., Xiao, Y. and Kersten-Oertel, M.</p>
           <p class="venue">IEEE Journal of Biomedical and Health Informatics, 2025</p>
           <p class="links">
@@ -136,13 +327,40 @@
         </article>
 
         <article class="paper">
-          <h3>ParaAntiProt provides paratope prediction using antibody and protein language models</h3>
+          <h4>ParaAntiProt provides paratope prediction using antibody and protein language models</h4>
           <p class="meta">Kalemati, M., Noroozi, A., Shahbakhsh, A. et al.</p>
-          <p class="venue">Scientific Reports, Nature Publishing Group, 2024</p>
+          <p class="venue">Scientific Reports 14, 29141 (2024)</p>
           <p class="links">
             <a href="https://doi.org/10.1038/s41598-024-80940-y">Paper</a>
           </p>
         </article>
+      </section>
+
+      <section id="talks" aria-labelledby="talks-heading">
+        <h2 id="talks-heading">Talks and posters</h2>
+        <ol class="news">
+          <li>
+            <time datetime="2026-09-30">Sep 2026</time>
+            <div>Talk, PhD Pizza Time, Inria Nancy.</div>
+          </li>
+          <li>
+            <time datetime="2026-09">Sep 2026</time>
+            <div>
+              Posters, ECCB 2026, Geneva —
+              <a href="pdf/ECCB_poster_AMPBindGen.pdf">AMP-BindGen</a> and
+              <a href="pdf/ECCB_poster_AMP_DiT.pdf">AMP-DiT</a>.
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-04">Apr 2026</time>
+            <div>
+              Posters, Koç University AI Symposium —
+              <a href="pdf/AI_symposium_AMP_poster.pdf">AMP design</a> and
+              <a href="pdf/AI_symposium_TED_poster.pdf">TED domain prediction</a>; joint talk on
+              <a href="pdf/AI_Symposium_AMP_Design__2026.pdf">treatment options for carbapenem resistance and AMP design with AI</a>.
+            </div>
+          </li>
+        </ol>
       </section>
     </main>
 
@@ -151,8 +369,11 @@
         <span>Alireza Noroozi</span>
         <span>
           <a href="mailto:noroozi.alirezaa@gmail.com">noroozi.alirezaa@gmail.com</a>
+          · <a href="https://github.com/Alirzeanoroozi">GitHub</a>
+          · <a href="https://scholar.google.com/citations?user=CzouC0IAAAAJ&hl=en">Scholar</a>
         </span>
       </div>
     </footer>
+    <script src="js/img.js"></script>
   </body>
 </html>

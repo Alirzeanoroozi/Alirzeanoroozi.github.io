@@ -1,0 +1,136 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.62in}
+\addtolength{\evensidemargin}{-0.62in}
+\addtolength{\textwidth}{1.24in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{1.35in}
+\setlength{\footskip}{4.08003pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule \vspace{-7pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-3pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-8pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=1pt, itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+\vspace*{10pt}
+\begin{center}
+    \textbf{\LARGE \scshape Alireza Noroozi} \\ \vspace{3pt}
+    \small
+    \faIcon{envelope}
+    \href{mailto:noroozi.alirezaa@gmail.com}{\underline{noroozi.alirezaa@gmail.com}}
+    $\cdot$
+    \faIcon{blog}
+    \href{https://alirzeanoroozi.github.io/}{\underline{alirzeanoroozi.github.io}}
+    $\cdot$
+    \faIcon{github}
+    \href{https://github.com/Alirzeanoroozi}{\underline{Github}}
+    $\cdot$
+    \faIcon{google}
+    \href{https://scholar.google.com/citations?user=CzouC0IAAAAJ\&hl=en}{\underline{Scholar}}
+    \\ \vspace{3pt}
+    \small\emph{Peptide and protein binder design; generative models for biological sequences; evaluation with molecular dynamics.}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ko\c{c} University, Istanbul}{Oct 2025 -- Jun 2027 (expected)}
+      {MSc in Computational Sciences and Engineering --- Presidential Fellowship}{GPA: 3.48/4.0}
+    \resumeSubheading
+      {Sharif University of Technology, Tehran}{Sep 2020 -- Jun 2024}
+      {BSc in Computer Engineering --- thesis on paratope prediction with protein LMs}{GPA: 17.32/20}
+  \resumeSubHeadingListEnd
+
+\section{Selected Publications}
+    \resumeItemListStart
+        \resumeItem{\textbf{A. Noroozi}, \"{O}. Keskin, A. G\"{u}rsoy, Y. Karami, H. Khakzad. \textbf{IDPepDesign: Insertion-Deletion is All Peptide Design Needs}. Preprint, 2026; ML4SM Workshop, NeurIPS 2026.}
+        \resumeItem{\textbf{BinderEval}: evaluating designed protein binders with molecular dynamics data and COMPASS. With the DELTA team, Inria Nancy. Preprint, 2026.}
+        \resumeItem{\textbf{A. Noroozi}, \"{O}. Keskin, A. G\"{u}rsoy. \textbf{AMP-DiT}: Antimicrobial Peptide Design with AMP-classifier Conditional Diffusion Transformers. GenBio Workshop at ICML 2026 (poster). \href{https://openreview.net/forum?id=KYzd6lcfZ0}{\underline{paper}}}
+        \resumeItem{M. Kalemati, \textbf{A. Noroozi}, A. Shahbakhsh et al. ParaAntiProt provides paratope prediction using antibody and protein language models. \emph{Scientific Reports} 14, 29141 (2024).}
+        \resumeItem{J. Reyes, \textbf{A. Noroozi}, Y. Xiao, M. Kersten-Oertel. Bridging the Gaps: Imputation of Parkinson's Disease Clinical Assessments With Federated Learning. \emph{IEEE JBHI} (2025).}
+    \resumeItemListEnd
+
+\section{Research Experience}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{DELTA Team, Inria Nancy} $|$ \footnotesize\emph{Peptide binder design, molecular dynamics}}{Jun 2026 -- Present}
+        \resumeItemListStart
+            \resumeItem{Supervised by Hamed Khakzad and Yasaman Karami. Built \textbf{IDPepDesign}, a target-conditioned insertion--deletion diffusion model (perplexity 17.1 $\rightarrow$ 11.3; FPD 1.84 $\rightarrow$ 0.75) with competitive interface quality across 11 benchmark targets.}
+            \resumeItem{Contributed to \textbf{BinderEval} and a new release of \textbf{COMPASS}, scoring designs from dynamics rather than single-structure confidence. Invited talk at PhD Pizza Time, Inria Nancy.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Ko\c{c} University} $|$ \footnotesize\emph{Generative models for antimicrobial peptides}}{Oct 2025 -- Present}
+        \resumeItemListStart
+            \resumeItem{Supervised by Prof. Attila G\"{u}rsoy and Prof. \"{O}zlem Keskin. \textbf{AMP-DiT}: classifier-conditioned discrete diffusion generating peptides directly in sequence space; conditioning on one activity predictor generalises to others. Accepted at GenBio @ ICML 2026; submitted to the AMP Challenge.}
+            \resumeItem{\textbf{AMP-BindGen}: guided design of peptide inhibitors of the carbapenemases NDM-5 and KPC-3 with a composite interface/activity/toxicity ranking; designs validated experimentally in the lab. Posters at ECCB 2026 and the Ko\c{c} AI Symposium.}
+            \resumeItem{\textbf{TED}: end-to-end seq2seq transformer predicting domain boundaries and CATH ids from sequence, trained on $\sim$186M sequences with LoRA over ESM-2.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{310.ai} $|$ \footnotesize\emph{AI Engineer in Computational Biology}}{Sep 2024 -- Oct 2025}
+        \resumeItemListStart
+            \resumeItem{Protein design models, IgG1 binder design, and a transformer generating taxonomy lineages from sequence; addressed token collapse with curriculum learning and embedding regularisation. Built an LLM tool-calling chatbot backend.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Sharif University (OPL) and Concordia University (apLab)}}{Dec 2022 -- Sep 2024}
+        \resumeItemListStart
+            \resumeItem{\textbf{ParaAntiProt}: sequence-only paratope prediction by transfer learning from antibody and protein LMs (\emph{Sci.\ Rep.}, 2024), under Dr. Koohi. Earlier work on MHC--peptide binding with attention models.}
+            \resumeItem{Summer internship under Dr. Kersten-Oertel: federated learning for imputing Parkinson's clinical assessments (\emph{IEEE JBHI}, 2025); implemented PW, FedAvg and FedOpt, with work on a PW convergence proof.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Honors, Service and Skills}
+    \resumeItemListStart
+        \resumeItem{\textbf{Honors:} 2025 Presidential Fellowship, Ko\c{c} University. 2024 Vector Scholarship for MSc entrance, York University (17,500 CAD, deferred). Ranked 31st of 150k+ in Iran's national university entrance exam (2020). Silver (2019) and Bronze (2018) medals, Iran's National Mathematical Olympiad.}
+        \resumeItem{\textbf{Reviewing:} GenBio Workshop, ICML 2026; ML4SM Workshop, NeurIPS 2026.}
+        \resumeItem{\textbf{Teaching:} TA, Python Programming (Ko\c{c}); Head TA, Probability and Statistics (2 semesters) and Compiler Design; projects head, Introduction to Bioinformatics (Sharif).}
+        \resumeItem{\textbf{Skills:} Python, C++, PyTorch, Hugging Face, SLURM/multi-GPU training; Boltz, BoltzGen, ADFLIP, RFdiffusion, ESM-2/ESM-C, ProtT5, Biopython, molecular dynamics analysis; Git, Docker, Linux.}
+        \resumeItem{\textbf{Languages:} Persian (native); English (fluent, TOEFL 97).}
+    \resumeItemListEnd
+
+\end{document}

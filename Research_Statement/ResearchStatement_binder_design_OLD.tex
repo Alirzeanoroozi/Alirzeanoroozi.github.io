@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amscd}
+
+\title{Research Statement}
+\author{Alireza Noroozi}
+% \email{anoroozi25@ku.edu.tr}
+\date{September 2026}
+
+\begin{document}
+
+\maketitle
+
+% Unsupervised Joint Representation Learning for Protein Sequence and Structure, with a Focus on Binder Design
+
+% Lead supervisor: Kiarash Jamali (Principal Investigator, Generative Biology Institute, EIT) - kiarash.jamali@eit.org
+
+% Co-supervisor: Charlotte Deane (Professor of Structural Bioinformatics, Department of Statistics, University of Oxford) - deane@stats.ox.ac.uk
+
+Protein and binder design are central to therapeutic discovery.
+A binder that recognises a chosen epitope with high affinity and selectivity can inhibit a pathway,
+recruit an E3 ligase, or serve as a modular starting point for drugs and diagnostics.
+Over the last few years, structure-prediction and generative models---AlphaFold-class predictors, protein language models,
+and diffusion-based designers such as RFdiffusion---have been developed largely to make this problem tractable.
+These methods have produced impressive successes on well-studied, globular targets. 
+They remain, however, far from a general solution: several systematic failure modes
+still limit their use on the proteins that matter most in disease.
+
+The first of these failures is generalisation. Current models are trained on a relatively small
+and redundant set of experimental complexes, so they behave poorly on new targets with low sequence
+or structural homology, where evolutionary couplings and PDB-like templates are weak or absent.
+Even when a complex can be generated, binder residue specificity is often wrong: the interface may
+look geometrically plausible, yet it does not encode a chemically precise contact map,
+and affinity is driven by a few non-selective interactions rather than a defined epitope.
+A related and more severe problem appears on conformationally dynamic proteins. Targets such as
+RBX1 undergo large motions and contain intrinsically disordered regions; they are poorly represented
+by a single static backbone. Designs that assume a rigid pocket therefore bind weakly,
+engage the wrong conformation, or fail altogether.
+
+A further limitation is that many pipelines reward stickiness rather than true molecular recognition.
+Models trained on sparse complex structures tend to produce hydrophobic, promiscuous interfaces that
+score well in silico but exhibit cross-reactivity in cells. Distinguishing a selective binder from a
+generic sticky protein remains an open problem, especially when experimental negatives and off-target complexes 
+are scarce. Current generators are also restricted in chemical modality: most sample only canonical amino-acid 
+sequences and standard protein backbones, even though non-canonical amino acids and peptides can expand the accessible
+chemistry, improve protease resistance, and create contacts that natural residues cannot form. Without representations 
+that jointly embed sequence, structure, and a broader chemical alphabet, design remains confined to a narrow and already 
+well-sampled region of binder space.
+
+Evaluation compounds these modelling gaps.
+Binder design is still judged mainly with static, non-visual metrics---interface pLDDT,
+predicted aligned error, Rosetta-style energy terms, or a single predicted complex---which neither 
+capture induced fit nor show whether the binder remains specific across a conformational ensemble.
+Such scores correlate only weakly with wet-lab success and give little insight into why a design failed.
+Finally, generated candidate sets are often redundant: diffusion and inverse-folding models collapse onto
+a few high-likelihood motifs, so large in silico libraries contain little true sequence or structural diversity,
+and experimental capacity is spent retesting near-duplicates rather than covering distinct binding modes. 
+Together, these limitations---poor behaviour on distant targets, weak residue-level specificity, difficulty
+with mobile and disordered proteins, cross-reactive sticky designs, a narrow set of chemical modalities,
+static evaluation, and low library diversity---define the gap that a joint sequence--structure 
+representation for binder design must address.  
+
+\end{document}

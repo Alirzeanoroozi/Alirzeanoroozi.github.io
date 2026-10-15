@@ -6,7 +6,7 @@
     <title>CV · Alireza Noroozi</title>
     <meta
       name="description"
-      content="Curriculum vitae — MSc student at Koç University and research intern at Inria Nancy (DELTA)."
+      content="Curriculum vitae — MSc student at Koç University and research intern with the DELTA team at Inria Nancy."
     />
     <link rel="icon" href="img/profile.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/theme.js"></script>
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
@@ -24,71 +25,50 @@
         <a class="wordmark" href="index.html">Alireza Noroozi</a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html">About</a>
+          <a href="index.html#research">Research</a>
           <a href="index.html#publications">Publications</a>
           <a href="blogs.html">Blogs</a>
           <a href="cv.html" aria-current="page">CV</a>
-          <a href="pdf/Alireza_Noroozi_CV.pdf">PDF</a>
         </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+          <span aria-hidden="true" data-theme-icon>◐</span>
+        </button>
       </div>
     </header>
 
     <main id="content" class="wrap">
       <h1 class="page-title">Curriculum vitae</h1>
       <p class="cv-download">
-        <a href="pdf/Alireza_Noroozi_CV.pdf">Download PDF</a>
-        · noroozi.alirezaa@gmail.com · English, Persian
+        noroozi.alirezaa@gmail.com · Persian (native), English (fluent)
       </p>
+      <div class="actions cv-actions">
+        <a class="btn btn-primary" href="pdf/Alireza_Noroozi_CV_onepage.pdf">One-page PDF</a>
+        <a class="btn" href="pdf/Alireza_Noroozi_CV.pdf">Full PDF</a>
+        <a class="btn" href="pdf/Alireza_Noroozi_Research_Statement.pdf">Research statement</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=CzouC0IAAAAJ&hl=en">Scholar</a>
+        <a class="btn" href="https://github.com/Alirzeanoroozi">GitHub</a>
+      </div>
 
       <section aria-labelledby="edu-heading">
         <h2 id="edu-heading">Education</h2>
         <div class="timeline">
           <article class="item">
-            <h3>MSc in Computer Engineering</h3>
-            <p class="meta">Koç University, Istanbul, Turkey · 2025 – Present</p>
+            <h3>MSc in Computational Sciences and Engineering</h3>
+            <p class="meta">Koç University, Istanbul, Türkiye · Oct 2025 – Jun 2027 (expected)</p>
             <ul>
-              <li>Presidential Fellowship for MSc Entrance</li>
-              <li>Research on antimicrobial peptide design and generative modeling</li>
+              <li>Presidential Fellowship for MSc entrance</li>
+              <li>Thesis direction: generative models for peptide and binder design</li>
+              <li>Advised by Prof. Attila Gürsoy and Prof. Özlem Keskin</li>
             </ul>
           </article>
           <article class="item">
-            <h3>Bachelor of Science in Computer Engineering</h3>
-            <p class="meta">Sharif University, Tehran, Iran · 2020 – 2024</p>
+            <h3>BSc in Computer Engineering</h3>
+            <p class="meta">Sharif University of Technology, Tehran, Iran · Sep 2020 – Jun 2024</p>
             <ul>
-              <li>GPA: 17.68/20 (3.54/4.0)</li>
-              <li>Focus on Machine Learning and Computational Biology</li>
-              <li>Bachelor thesis on paratope prediction using protein language models</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section aria-labelledby="exp-heading">
-        <h2 id="exp-heading">Experience</h2>
-        <div class="timeline">
-          <article class="item">
-            <h3>AI Engineer in Computational Biology</h3>
-            <p class="meta">310.ai · 2024 – 2025</p>
-            <ul>
-              <li>Working on protein design deep learning models</li>
-              <li>ML research on taxonomy prediction models</li>
-              <li>Designing protein binders using AI</li>
-              <li>Developing AI chatbot backend using LLM tool calling</li>
-            </ul>
-          </article>
-          <article class="item">
-            <h3>PHP, Back-end, Web developer</h3>
-            <p class="meta">Ershan Total Solution · June 2022 – September 2022</p>
-            <ul>
-              <li>Full-stack web development</li>
-              <li>Backend systems development</li>
-            </ul>
-          </article>
-          <article class="item">
-            <h3>Mathematics Olympiad Tutor</h3>
-            <p class="meta">Salam High School · September 2021 – March 2023</p>
-            <ul>
-              <li>Teaching advanced mathematics concepts</li>
-              <li>Preparing students for mathematical competitions</li>
+              <li>GPA: 17.32/20 (3.46/4.0)</li>
+              <li>Focus on machine learning and computational biology</li>
+              <li>Thesis on paratope prediction using protein language models, published in <em>Scientific Reports</em></li>
+              <li>Ranked 31st among 150,000+ participants in Iran’s national university entrance exam (2020)</li>
             </ul>
           </article>
         </div>
@@ -98,52 +78,83 @@
         <h2 id="research-heading">Research experience</h2>
         <div class="timeline">
           <article class="item">
-            <h3>Research Intern — Protein Binder Design Evaluation, Molecular Dynamics</h3>
-            <p class="meta">DELTA Team, Inria Nancy, France · June 2026 – Present</p>
+            <h3>Research Intern — peptide binder design, molecular dynamics</h3>
+            <p class="meta">DELTA Team, Inria Nancy, France · Jun 2026 – Present</p>
             <ul>
               <li>Supervised by Hamed Khakzad and Yasaman Karami</li>
-              <li>Evaluating protein binder design candidates using molecular dynamics simulation</li>
-              <li>Assessing protein flexibility and binding quality for computational binder design</li>
+              <li>
+                Developed <strong>IDPepDesign</strong>, a target-conditioned insertion–deletion
+                diffusion model for peptide binder design, built on SCISOR with pooled-target
+                conditioning and residue-level cross-attention
+              </li>
+              <li>
+                Contributed to <strong>BinderEval</strong>, which evaluates designed binders using
+                molecular dynamics data and COMPASS rather than single-structure confidence scores
+              </li>
+              <li>Released a new version of <strong>COMPASS</strong></li>
+              <li>Gave a talk at PhD Pizza Time, Inria Nancy (Sep 2026)</li>
             </ul>
           </article>
           <article class="item">
-            <h3>Research Assistant — AMP Design, Diffusion Transformers</h3>
-            <p class="meta">Koç University · October 2025 – Present</p>
+            <h3>Graduate Researcher — antimicrobial peptide design</h3>
+            <p class="meta">Koç University · Oct 2025 – Present</p>
             <ul>
-              <li>AMP-DiT: antimicrobial peptide generation with denoising diffusion transformers and classifier guidance</li>
-              <li>Accepted as a poster at the GenBio Workshop at ICML 2026</li>
-              <li>Supervised by Prof. Attila Gürsoy and Prof. Özlem Keskin</li>
+              <li>
+                <strong>AMP-DiT</strong>: a classifier-conditioned discrete diffusion transformer
+                that generates antimicrobial peptides directly in sequence space, avoiding the
+                representation mismatch of protein language models trained on full-length proteins.
+                Accepted as a poster at the GenBio Workshop at ICML 2026 and submitted to the AMP
+                Challenge
+              </li>
+              <li>
+                <strong>AMP-BindGen</strong>: guided design of peptide binders and inhibitors
+                against the carbapenemases NDM-5 and KPC-3, with a composite ranking scheme over
+                interface confidence, catalytic-site engagement, predicted activity and toxicity.
+                Designs have been validated experimentally in the lab
+              </li>
+              <li>
+                <strong>TED</strong>: an end-to-end sequence-to-sequence transformer predicting
+                protein domain boundaries and CATH identifiers directly from sequence, trained on
+                ~186M sequences with LoRA fine-tuning over ESM-2 embeddings
+              </li>
+              <li>
+                <strong>BoltzGen-ADC</strong>: generative design of protease-cleavable peptide
+                linkers for antibody–drug conjugates, submitted to the Merck Challenge (with
+                Mahda Ghasemiagreh)
+              </li>
+              <li>Collaboration with KUISCID and the School of Medicine on carbapenem resistance</li>
             </ul>
           </article>
           <article class="item">
-            <h3>Research Assistant — Transfer Learning, Antibody, Paratope Prediction</h3>
-            <p class="meta">OPL, Sharif University · June 2023 – September 2024</p>
+            <h3>Research Assistant — transfer learning for paratope prediction</h3>
+            <p class="meta">OPL, Sharif University · Jun 2023 – Sep 2024</p>
             <ul>
-              <li>Department of Computer Engineering, Sharif University</li>
-              <li>Bachelor project under supervision of Dr. Koohi</li>
-              <li>ParaAntiProt: transfer learning for paratope prediction using sequence only</li>
-              <li>Improving paratope prediction accuracy using protein language models</li>
+              <li>Bachelor project under the supervision of Dr. Koohi</li>
+              <li>
+                <strong>ParaAntiProt</strong>: sequence-only paratope prediction via transfer
+                learning from antibody and protein language models
+              </li>
+              <li>Published in <em>Scientific Reports</em> (2024)</li>
             </ul>
           </article>
           <article class="item">
-            <h3>Research Intern — Federated Learning, Medical ML</h3>
-            <p class="meta">apLab, Concordia University · June 2023 – September 2023</p>
+            <h3>Research Intern — federated learning for medical data</h3>
+            <p class="meta">apLab, Concordia University, Montreal, Canada · Jun 2023 – Sep 2023</p>
             <ul>
-              <li>Department of Computer Science, Concordia University, Montreal, Canada</li>
-              <li>Intern under supervision of Dr. Kersten-Oertel</li>
-              <li>Comparing and implementing federated learning algorithms for data imputation on Parkinson’s disease</li>
-              <li>Using GAN and machine learning methods for Parkinson’s disease prediction with distributed data</li>
-              <li>Implementing PW, FedAvg, FedOpt, and related methods in PyTorch, including work on a mathematical proof of PW convergence</li>
-              <li>Developing federated algorithms for non-identical data</li>
+              <li>Summer internship under the supervision of Dr. Kersten-Oertel</li>
+              <li>
+                Compared and implemented federated learning algorithms for imputing Parkinson’s
+                disease clinical assessments; published in <em>IEEE JBHI</em> (2025)
+              </li>
+              <li>Implemented PW, FedAvg and FedOpt in PyTorch, including work on a convergence proof for PW</li>
+              <li>Developed federated algorithms for non-identically distributed data, and GAN-based methods for prediction from distributed data</li>
             </ul>
           </article>
           <article class="item">
-            <h3>Research Assistant — Attention Deep Learning Models, Protein Affinity Binding</h3>
-            <p class="meta">OPL, Sharif University · December 2022 – March 2023</p>
+            <h3>Research Assistant — attention models for binding affinity</h3>
+            <p class="meta">OPL, Sharif University · Dec 2022 – Mar 2023</p>
             <ul>
-              <li>Department of Computer Engineering, Sharif University</li>
-              <li>Bachelor student under supervision of Dr. Koohi</li>
-              <li>Working on MHC–peptide binding prediction using attention mechanisms</li>
+              <li>MHC–peptide binding prediction using attention mechanisms, supervised by Dr. Koohi</li>
             </ul>
           </article>
         </div>
@@ -151,17 +162,43 @@
 
       <section aria-labelledby="pubs-heading">
         <h2 id="pubs-heading">Publications</h2>
+
+        <h3 class="sub-heading">Preprints and submissions</h3>
         <article class="paper">
-          <h3>AMP-DiT: Antimicrobial Peptide Design with Denoising Diffusion Transformers and Classifier Guidance</h3>
-          <p class="meta">Noroozi, A. and Gürsoy, A. · 2026</p>
+          <h4>IDPepDesign: Insertion–Deletion is all peptide design needs</h4>
+          <p class="meta">Noroozi, A., Keskin, Ö., Gürsoy, A., Karami, Y. and Khakzad, H. · 2026</p>
+          <p class="venue">Preprint · ML4SM Workshop, NeurIPS 2026</p>
+          <p class="links">
+            <a href="pdf/IDPepDesign__Insertion_Deletion_is_all_peptide_design_needs_ML4SM_Neurips2026.pdf">PDF</a>
+          </p>
+        </article>
+        <article class="paper">
+          <h4>BinderEval: evaluating designed protein binders with dynamics data and COMPASS</h4>
+          <p class="meta">With the DELTA team, Inria Nancy · 2026</p>
+          <p class="venue">Preprint</p>
+        </article>
+        <article class="paper">
+          <h4>BoltzGen-ADC: generative design of universal protease-cleavable peptide linkers for antibody–drug conjugates</h4>
+          <p class="meta">Ghasemiagreh, M. and Noroozi, A. · 2026</p>
+          <p class="venue">Merck Challenge submission</p>
+          <p class="links">
+            <a href="pdf/Merck_Challenge.pdf">PDF</a>
+          </p>
+        </article>
+
+        <h3 class="sub-heading">Peer-reviewed</h3>
+        <article class="paper">
+          <h4>AMP-DiT: Antimicrobial Peptide Design with AMP-classifier Conditional Diffusion Transformers</h4>
+          <p class="meta">Noroozi, A., Keskin, Ö. and Gürsoy, A. · 2026</p>
           <p class="venue">GenBio Workshop at ICML 2026 (poster)</p>
           <p class="links">
             <a href="https://openreview.net/forum?id=KYzd6lcfZ0">Paper</a>
+            <a href="pdf/AMP-DiT_genbio_ICML2026.pdf">PDF</a>
             <a href="https://github.com/Alirzeanoroozi/DiT-AMP">Code</a>
           </p>
         </article>
         <article class="paper">
-          <h3>Bridging the Gaps: Imputation of Parkinson’s Disease Clinical Assessments With Federated Learning</h3>
+          <h4>Bridging the Gaps: Imputation of Parkinson’s Disease Clinical Assessments With Federated Learning</h4>
           <p class="meta">Reyes, J., Noroozi, A., Xiao, Y. and Kersten-Oertel, M. · 2025</p>
           <p class="venue">IEEE Journal of Biomedical and Health Informatics</p>
           <p class="links">
@@ -169,46 +206,132 @@
           </p>
         </article>
         <article class="paper">
-          <h3>ParaAntiProt provides paratope prediction using antibody and protein language models</h3>
+          <h4>ParaAntiProt provides paratope prediction using antibody and protein language models</h4>
           <p class="meta">Kalemati, M., Noroozi, A., Shahbakhsh, A. et al. · 2024</p>
-          <p class="venue">Scientific Reports, Nature Publishing Group</p>
+          <p class="venue">Scientific Reports 14, 29141</p>
           <p class="links">
             <a href="https://doi.org/10.1038/s41598-024-80940-y">Paper</a>
           </p>
         </article>
       </section>
 
+      <section aria-labelledby="talks-heading">
+        <h2 id="talks-heading">Talks and posters</h2>
+        <ul class="plain-list">
+          <li>Talk, PhD Pizza Time, Inria Nancy, Sep 2026</li>
+          <li>
+            Posters, ECCB 2026, Geneva —
+            <a href="pdf/ECCB_poster_AMPBindGen.pdf">AMP-BindGen</a> and
+            <a href="pdf/ECCB_poster_AMP_DiT.pdf">AMP-DiT</a>
+          </li>
+          <li>
+            Posters, Koç University AI Symposium, Apr 2026 —
+            <a href="pdf/AI_symposium_AMP_poster.pdf">AMP design</a> and
+            <a href="pdf/AI_symposium_TED_poster.pdf">TED</a>; joint
+            <a href="pdf/AI_Symposium_AMP_Design__2026.pdf">talk</a> on carbapenem resistance and
+            AMP design with AI
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="exp-heading">
+        <h2 id="exp-heading">Industry experience</h2>
+        <div class="timeline">
+          <article class="item">
+            <h3>AI Engineer in Computational Biology</h3>
+            <p class="meta">310.ai · Sep 2024 – Oct 2025</p>
+            <ul>
+              <li>Deep learning models for protein design</li>
+              <li>
+                <strong>Taxonomy lineage generation</strong>: a transformer that generates full
+                taxonomy lineages from protein sequences; designed the training pipeline,
+                tokenisation and loss, and addressed token collapse with curriculum learning and
+                embedding regularisation
+              </li>
+              <li>
+                <strong>TED domain classifier</strong>: multi-class classification of immunoglobulin
+                domains with ProtT5 and ESM-2, including large-scale preprocessing and GPU-cluster
+                fine-tuning (<a href="https://github.com/Alirzeanoroozi/TED">code</a>)
+              </li>
+              <li>
+                <strong>IgG1 binder design</strong>: generative protein models with structural
+                constraints and PLM embeddings to guide binder specificity and stability
+              </li>
+              <li>Built an AI chatbot backend using LLM tool calling</li>
+            </ul>
+          </article>
+          <article class="item">
+            <h3>Back-end and web developer (PHP)</h3>
+            <p class="meta">Ershan Total Solution · Jun 2022 – Sep 2022</p>
+            <ul>
+              <li>Built a stock-trading website using the Laminas framework</li>
+              <li>Developed an Excel and PDF report generator</li>
+            </ul>
+          </article>
+          <article class="item">
+            <h3>Machine Learning Intern</h3>
+            <p class="meta">AI Medical · Jun 2021 – Sep 2021</p>
+            <ul>
+              <li>Summer internship on machine learning for medical imaging</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <section aria-labelledby="honors-heading">
         <h2 id="honors-heading">Honors and awards</h2>
         <ul class="honors">
-          <li><span>2025</span> Presidential Fellowship for MSc Entrance at Koç University</li>
-          <li><span>2024</span> Vector Scholarship for MSc Entrance at York University (17,500 CAD)</li>
-          <li><span>2019</span> Silver Medal in Iran’s National Mathematical Olympiad</li>
-          <li><span>2018</span> Bronze Medal in Iran’s National Mathematical Olympiad</li>
+          <li><span>2025</span> Presidential Fellowship for MSc entrance, Koç University</li>
+          <li><span>2024</span> Vector Scholarship for MSc entrance, York University (17,500 CAD; deferred)</li>
+          <li><span>2020</span> Ranked 31st of 150,000+ in Iran’s national university entrance exam</li>
+          <li><span>2019</span> Silver Medal, Iran’s National Mathematical Olympiad</li>
+          <li><span>2018</span> Bronze Medal, Iran’s National Mathematical Olympiad</li>
         </ul>
+      </section>
+
+      <section aria-labelledby="service-heading">
+        <h2 id="service-heading">Service and teaching</h2>
+        <div class="columns">
+          <article class="item">
+            <h3>Reviewing</h3>
+            <ul>
+              <li>GenBio Workshop (Generative and Agentic AI for Biology), ICML 2026</li>
+              <li>ML4SM Workshop, NeurIPS 2026</li>
+            </ul>
+          </article>
+          <article class="item">
+            <h3>Teaching assistance</h3>
+            <ul>
+              <li>Python Programming, Koç University</li>
+              <li>Head TA, Probability and Statistics (2 semesters), Sharif University</li>
+              <li>Head TA, Compiler Design, Sharif University</li>
+              <li>Project lead TA, Introduction to Bioinformatics, Sharif University</li>
+              <li>Discrete Structures, Sharif University</li>
+              <li>Mathematics Olympiad tutor, Salam High School (2021–2023)</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section aria-labelledby="interests-heading">
         <h2 id="interests-heading">Research interests</h2>
         <div class="columns">
           <article class="item">
-            <h3>Computational biology</h3>
+            <h3>Design</h3>
             <ul>
-              <li>Large language models for biological sequences</li>
-              <li>Protein design models</li>
-              <li>Antimicrobial peptide design</li>
-              <li>Antibody design</li>
-              <li>Paratope prediction</li>
-              <li>Molecular dynamics for protein flexibility and binder evaluation</li>
+              <li>Peptide and protein binder design</li>
+              <li>Generative models for biological sequences</li>
+              <li>Discrete and insertion–deletion diffusion</li>
+              <li>Antibody design and paratope prediction</li>
             </ul>
           </article>
           <article class="item">
-            <h3>Machine learning</h3>
+            <h3>Evaluation and modelling</h3>
             <ul>
-              <li>Federated learning</li>
-              <li>Transfer learning</li>
-              <li>Deep learning for medical applications</li>
-              <li>Distributed machine learning</li>
+              <li>Molecular dynamics for flexibility and binding</li>
+              <li>Evaluation beyond static confidence scores</li>
+              <li>Protein–ligand cofolding and adaptive resolution</li>
+              <li>Protein language models and transfer learning</li>
             </ul>
           </article>
         </div>
@@ -217,10 +340,18 @@
       <section aria-labelledby="skills-heading">
         <h2 id="skills-heading">Technical skills</h2>
         <ul class="plain-list">
-          <li><strong>Programming languages:</strong> Python, PHP, JavaScript, C++</li>
-          <li><strong>ML/DL frameworks:</strong> PyTorch, TensorFlow, Scikit-learn</li>
-          <li><strong>Bioinformatics tools:</strong> Biopython, ESM, ProtTrans</li>
-          <li><strong>Other:</strong> Git, Docker, Linux, web development</li>
+          <li><strong>Languages:</strong> Python, C++, JavaScript, PHP</li>
+          <li><strong>ML:</strong> PyTorch, Hugging Face, scikit-learn, distributed and multi-GPU training</li>
+          <li><strong>Structural biology:</strong> Boltz, BoltzGen, AlphaFold-class predictors, RFdiffusion, ESM-2/ESM-C, ProtT5, Biopython, GROMACS-style MD analysis</li>
+          <li><strong>Other:</strong> Git, Docker, Linux, SLURM clusters</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="lang-heading">
+        <h2 id="lang-heading">Languages</h2>
+        <ul class="plain-list">
+          <li><strong>Persian:</strong> native</li>
+          <li><strong>English:</strong> fluent — TOEFL 97 (R 26, L 25, S 25, W 21)</li>
         </ul>
       </section>
     </main>
@@ -233,5 +364,6 @@
         </span>
       </div>
     </footer>
+    <script src="js/img.js"></script>
   </body>
 </html>

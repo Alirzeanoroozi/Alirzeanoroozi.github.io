@@ -1,0 +1,27 @@
+Unsupervised Joint Representation Learning for Protein Sequence and Structure
+Co-supervisor: Charlotte Deane, (Professor of Structural Bioinformatics, Department of Statistics, University of Oxford) - deane@stats.ox.ac.uk 
+Large generative models trained on internet-scale data have transformed machine learning in the past few years. One of the key ingredients in their success has been the availability of high-quality and diverse data sources.
+While machine learning has also recently transformed biology for structure prediction (AlphaFold2) and design (RFDiffusion), the lack of large-scale structural data has hindered further progress.   
+So far, most structure prediction and design models have been trained on the Protein Data Bank,
+a database of experimentally resolved structures that contains a few hundred thousand structures,
+many of which are homologues of other entries in the database.
+Economically and therapeutically relevant classes of complexes such as protein-RNA and protein-ligand interactions
+are even a smaller subset of this data. This data sparsity has limited the application of generative models in areas such as enzyme design and drug discovery.  
+In contrast, sequence data is abundant. Large sequence datasets have already been used for
+training protein and genome language models at scale. Furthermore, it has been shown that protein and genomic language models encode
+structures even though they are only trained to predict sequences, with a computationally efficient training run afterwards capable
+of extracting unsupervised structural features learned by these networks.  
+
+The hypothesis of the PhD project is that training models by mixing large sequence data with sparse supervision
+from structure data will enable learning structure-aware representations that would improve generalisation compared
+to current structure-only approaches. Concretely, this PhD project will consist of designing semi-supervised and
+unsupervised approaches to jointly embed sequence and structure, focused on its applicability to modelling protein-ligand interactions.
+These representations will then be used for training new structure prediction and design models that will be more robust to overfitting on complexes with scarce structural data.  
+
+Related work 
+
+Jumper et al., 2021. Highly accurate protein structure prediction with AlphaFold. 
+Lin et al., 2023. Evolutionary-scale prediction of atomic-level protein structure with a language model.  
+Zhang et al., 2025. Predicting protein-protein interactions in the human proteome.  
+Watson et al., 2023. De novo design of protein structure and function with RFdiffusion. 
+He et al., 2021. Masked Autoencoders Are Scalable Vision Learners.  

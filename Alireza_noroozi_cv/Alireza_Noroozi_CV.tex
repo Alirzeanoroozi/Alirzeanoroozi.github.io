@@ -1,0 +1,237 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+\vspace*{12pt}
+\begin{center}
+    \textbf{\Huge \scshape Alireza Noroozi \\ \vspace{8pt}}
+    \faIcon{envelope}
+    \href{mailto:noroozi.alirezaa@gmail.com}{\underline{noroozi.alirezaa@gmail.com}}
+    \faIcon{github}
+    \href{https://github.com/Alirzeanoroozi}{\underline{Github}}
+    \faIcon{blog}
+    \href{https://alirzeanoroozi.github.io/}{\underline{Personal Page}}
+    \faIcon{google}
+    \href{https://scholar.google.com/citations?user=CzouC0IAAAAJ\&hl=en}{\underline{Google Scholar}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ko\c{c} University}{October 2025 -- June 2027}
+      {MSc in Computer Engineering}{GPA: 3.48/4.0}
+    \resumeSubheading
+      {Sharif University}{September 2020 -- June 2024}
+      {Bachelor of Science in Computer Engineering}{GPA: 17.32/20 (3.46/4.0)}
+  \resumeSubHeadingListEnd
+
+\section{Publications}
+    \resumeItemListStart
+        \resumeItem{\textbf{A. Noroozi}, \"{O}. Keskin, A. G\"{u}rsoy, Y. Karami, and H. Khakzad, IDPepDesign: Insertion-Deletion is All Peptide Design Needs, submitted to NeurIPS 2026.}
+        \resumeItem{\textbf{A. Noroozi} and A. G\"{u}rsoy, AMP-DiT: Antimicrobial Peptide Design with Denoising Diffusion Transformers and Classifier Guidance, GenBio Workshop at ICML 2026 (poster). \href{https://openreview.net/forum?id=KYzd6lcfZ0}{\underline{paper}} \href{https://github.com/Alirzeanoroozi/DiT-AMP}{\underline{code}}}
+        \resumeItem{Kalemati, M., \textbf{Noroozi, A.}, Shahbakhsh, A. et al. ParaAntiProt provides paratope prediction using antibody and protein language models. Sci Rep 14, 29141 (2024). \href{https://doi.org/10.1038/s41598-024-80940-y}{\underline{link}}}
+        \resumeItem{J. Reyes, \textbf{A. Noroozi}, Y. Xiao and M. Kersten-Oertel, Bridging the Gaps: Imputation of Parkinson's Disease Clinical Assessments With Federated Learning, in IEEE Journal of Biomedical and Health Informatics. \href{https://ieeexplore.ieee.org/document/11098925}{\underline{link}}}
+    \resumeItemListEnd
+
+\section{Working Experience}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{310.ai} $|$ \footnotesize\emph{AI Engineer in Computational Biology}}{September 2024 -- October 2025}
+        \resumeItemListStart
+            \resumeItem{Working on Protein Design Deep learning models}
+            \resumeItem{ML research on Taxonomy prediction models.}
+            \resumeItem{Designing Protein Binders using AI}
+            \resumeItem{Developing AI chatbot backend using LLM calling Tools}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Internship@Concordia} $|$ \footnotesize\emph{Deep Learning, Medical Imaging}}{June 2023 -- September 2023}
+        \resumeItemListStart
+            \resumeItem{Summer Internship in Machine Learning and medical data, Medical imaging}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Ershan Total Solution} $|$ \footnotesize\emph{PHP, Back-end, Web developer}}{June 2022 -- September 2022}
+        \resumeItemListStart
+            \resumeItem{Developing website for trade in stocks using Laminas Framework in Php.}
+            \resumeItem{my Last project was Excel and Pdf generator for all reports.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{AI Medical} $|$ \footnotesize\emph{Deep Learning, Medical Imaging}}{June 2021 -- September 2021}
+        \resumeItemListStart
+            \resumeItem{Summer Internship in Machine Learning and medical data, Medical imaging}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Salam High school} $|$ \footnotesize\emph{Mathematics Olympiad tutor}}{September 2021 -- March 2023}
+        \resumeItemListStart
+            \resumeItem{Teaching Mathematical Olympiad in high schools (Geometry, Algebra, combinatorics, Number Theory).}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Honors}
+    \resumeItemListStart
+        \resumeItem{Awarded the 2025 Presidential Fellowship at Ko\c{c} University for MSc Entrance.}
+        \resumeItem{Awarded the 2024 Vector Scholarship for MSc Entrance at York University, valued at 17,500 CAD.}
+        \resumeItem{Acquired Bronze (2018) and Silver (2019) medals in \textbf{Iran's national Mathematical Olympiad}.}
+        \resumeItem{Ranked 31 among 150k+ participants in Iran's national university entrance in 2020 (AKA. KONKUR).}
+    \resumeItemListEnd
+
+\section{Reviewing}
+\resumeItemListStart
+    \resumeItem{Reviewer, GenBio Workshop (Generative and Agentic AI for Biology), ICML 2026}
+    \resumeItem{Reviewer, ML4SM Workshop, NeurIPS 2026}
+\resumeItemListEnd
+
+\vspace*{12pt}
+\section{Research Experience}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{DELTA Team, Inria Nancy} $|$ \footnotesize\emph{Protein Binder Design, Molecular Dynamics}}{June 2026 -- Present}
+        \resumeItemListStart
+            \resumeItem{Summer research internship under supervision of Hamed Khakzad and Yasaman Karami}
+            \resumeItem{Developed \textbf{IDPepDesign}, a target-conditioned shortening diffusion model for peptide binder design (submitted to NeurIPS 2026)}
+            \resumeItem{Evaluating protein binder design candidates using \textbf{molecular dynamics simulation} to assess protein flexibility and binding quality}
+            \resumeItem{Contributing to computational biology research on protein design and binder assessment pipelines}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{AMP-DiT} $|$ \footnotesize\emph{Generative Modeling, Diffusion Transformers, Computational Biology}}{October 2025 -- Present}
+        \resumeItemListStart
+            \resumeItem{Ko\c{c} University, Computer Engineering; supervised by Prof. Attila G\"{u}rsoy and Prof. \"{O}zlem Keskin}
+            \resumeItem{Developed \textbf{AMP-DiT}, a denoising diffusion transformer for antimicrobial peptide generation directly in sequence space}
+            \resumeItem{Guided generation with an AMP classifier to produce diverse peptides with strong predicted antimicrobial activity}
+            \resumeItem{Accepted as a poster at the GenBio Workshop at ICML 2026}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Taxonomy Lineage Generation} $|$ \footnotesize\emph{Transformer Models, Protein Language Models, Sequence-to-Sequence Learning}}{2024}
+        \resumeItemListStart
+            \resumeItem{AI Research Engineer, 310.ai}
+            \resumeItem{Built a \textbf{transformer-based model} that generates full \textbf{taxonomy lineages} from protein sequences.}
+            \resumeItem{Designed training pipelines, tokenization strategies, and loss functions to stabilize sequence generation.}
+            \resumeItem{Addressed token collapse issues (model repeating most frequent token) and improved generalization via curriculum learning and embedding regularization.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{TED Domain Classifier} $|$ \footnotesize\emph{Protein Domain Classification, Fine-Tuning, Multiclass Modeling}}{2024}
+        \resumeItemListStart
+            \resumeItem{AI Research Engineer, 310.ai}
+            \resumeItem{\href{https://github.com/Alirzeanoroozi/TED}{Project Link}}
+            \resumeItem{Created a \textbf{multi-class classifier} for TED immunoglobulin domains using protein LMs (ProtT5, ESM-2).}
+            \resumeItem{Ran large-scale data preprocessing, domain extraction, and fine-tuning experiments on GPU clusters.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{IgG1 Binder Design} $|$ \footnotesize\emph{Protein Design, Generative AI, Structural Modeling}}{2024}
+        \resumeItemListStart
+            \resumeItem{AI Research Engineer, 310.ai}
+            \resumeItem{Designed \textbf{IgG1 antibody binders} using generative protein models and sequence design pipelines.}
+            \resumeItem{Integrated structural constraints and PLM embeddings to guide binder specificity and stability.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{OPL} $|$ \footnotesize\emph{Transfer Learning, Pytorch, Antibody, Paratope Prediction}}{June 2023 -- September 2024}
+        \resumeItemListStart
+            \resumeItem{Department of Computer Engineering, Sharif University}
+            \resumeItem{Research as Bachelor Project under Supervision of Dr. Koohi}
+            \resumeItem{ParaAntiProt: A Transfer Learning for Paratope Prediction only using Sequence}
+            \resumeItem{Improving the accuracy of Paratope Prediction using Protein Language Models}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{apLab} $|$ \footnotesize\emph{Federated Learning, Ml Medical, Pytorch, Parkinson Diseases}}{June 2023 -- September 2023}
+        \resumeItemListStart
+            \resumeItem{Department of Computer Science, Concordia University, Montreal City, Canada}
+            \resumeItem{Research as Intern under Supervision of Dr.Kersten-Ortel}
+            \resumeItem{Comparing and implementing different Federated Learning Algorithms for data imputation on Parkinson's Diseases.}
+            \resumeItem{Using GAN and Machine Learning methods for Parkinson's disease prediction with distributed data}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{apLab} $|$ \footnotesize\emph{Federated Learning, Distributed Deep Learning, Pytorch}}{June 2023 -- September 2023}
+        \resumeItemListStart
+            \resumeItem{Department of Computer Science, Concordia University, Montreal City, Canada}
+            \resumeItem{Research as Intern under Supervision of Dr.Kersten-Ortel}
+            \resumeItem{Implementing PW, FedAvg, FedOpt, ..., in Pytorch and working on Mathematically proof of PW Convergence}
+            \resumeItem{Developing federated Algorithms for increasing performance in non-identical data}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{OPL} $|$ \footnotesize\emph{Attention Deep Learning Models, Protein Affinity Binding, Pytorch, MHC-Peptide}}{Dec 2022 -- Mar 2023}
+        \resumeItemListStart
+            \resumeItem{Department of Computer Engineering, Sharif University}
+            \resumeItem{Research as a Bachelor Student under the Supervision of Dr.Koohi}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace*{12pt}
+\section{Language Proficiency}
+    \resumeItemListStart
+        \resumeItem{Persian: Native}
+        \resumeItem{English: Fluent, TOEFL (T:97, R:26, L:25, S:25, W:21)}
+    \resumeItemListEnd
+
+\section{Teaching Assistant Experience}
+    \resumeItemListStart
+        \resumeItem{Teaching Assistant Python Programming, Ko\c{c} University}
+        \resumeItem{Head of Teaching Assistant Team of Probability and Statistics for 2 Semester (lecturer: Dr.Sharifi-Zarchi)}
+        \resumeItem{Head of Teaching Assistant Team of Compiler Design (lecturer: Dr.Hosseinmardi)}
+        \resumeItem{Project's Head in Teaching Assistant Team of Intro to Bioinformatics}
+        \resumeItem{Discrete Structures, Probability and Statistics (2 times), Basic programming Python}
+    \resumeItemListEnd
+
+\end{document}

@@ -1,2 +1,10 @@
 .DS_Store
 _site
+
+# LaTeX build artefacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz

@@ -36,6 +36,42 @@ function formatDate(value) {
   });
 }
 
+function renderMarkdown(source) {
+  const defs = {};
+  let body = source.replace(/^\[\^([^\]]+)\]:\s*(.+)$/gm, (_, id, text) => {
+    defs[id] = text.trim();
+    return "";
+  });
+
+  const order = [];
+  body = body.replace(/\[\^([^\]]+)\]/g, (_, id) => {
+    if (!order.includes(id)) order.push(id);
+    return `%%CITE:${id}%%`;
+  });
+
+  let html = marked.parse(body.trim());
+  html = html.replace(/%%CITE:([^%]+)%%/g, (_, id) => {
+    const n = order.indexOf(id) + 1;
+    return `<sup class="ref"><a href="#fn-${id}">${n}</a></sup>`;
+  });
+
+  if (order.length) {
+    const items = order
+      .map((id) => {
+        const text = defs[id] || "";
+        const inner =
+          typeof marked.parseInline === "function"
+            ? marked.parseInline(text)
+            : escapeHtml(text);
+        return `<li id="fn-${id}">${inner}</li>`;
+      })
+      .join("");
+    html += `<section class="footnotes"><h2>References</h2><ol>${items}</ol></section>`;
+  }
+
+  return html;
+}
+
 async function loadPost(slug) {
   const response = await fetch(`posts/${slug}.md`);
   if (!response.ok) {
@@ -112,7 +148,7 @@ async function renderPost() {
     root.innerHTML = `
       <h1 class="page-title">${escapeHtml(post.title)}</h1>
       ${post.date ? `<p class="post-date">${escapeHtml(formatDate(post.date))}</p>` : ""}
-      <div class="markdown">${marked.parse(post.body)}</div>
+      <div class="markdown">${renderMarkdown(post.body)}</div>
     `;
   } catch {
     root.innerHTML = "<p>Post not found. <a href='blogs.html'>Back to blogs</a></p>";
